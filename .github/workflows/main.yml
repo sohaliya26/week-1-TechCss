@@ -69,4 +69,4 @@ jobs:
         run: sudo docker rm -f car-booking || true
 
       - name: Run Docker Image
-        run: sudo docker run -d -p 8080:8080 --name Cab ${{ secrets.DOCKERHUB_USERNAME }}/car-booking:v1
+        run: sudo docker run -d -p 8080:8080 --name car-booking ${{ secrets.DOCKERHUB_USERNAME }}/car-booking:v1
