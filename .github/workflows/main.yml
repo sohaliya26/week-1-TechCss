@@ -54,7 +54,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/car-booking:v1
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/car-booking:latest
 
   deploy:
     needs: build
@@ -63,10 +63,10 @@ jobs:
       - name: Install & Pull Image from Docker Hub
         run: |
           sudo apt install docker.io -y
-          sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/car-booking:v1
+          sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/car-booking:latest
           
       - name: Delete Old Container
         run: sudo docker rm -f car-booking || true
 
       - name: Run Docker Image
-        run: sudo docker run -d -p 8080:8080 --name car-booking ${{ secrets.DOCKERHUB_USERNAME }}/car-booking:v1
+        run: sudo docker run -d -p 8080:8080 --name car-booking ${{ secrets.DOCKERHUB_USERNAME }}/car-booking:latest
