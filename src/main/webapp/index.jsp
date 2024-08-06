@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title> Cab Booking website Author Mitin !</title>
+  <title> Car Booking website Author Mitin !</title>
 </head>
 
 <body>
