@@ -9,7 +9,7 @@
   <div class="testbox">
     <form action="car cooking-confirm.php" method="POST">
       <div class="banner">
-        <h1>Cab Booking website</h1>
+        <h1>Car Booking website</h1>
       </div>
       <div class="item">
         <br>
