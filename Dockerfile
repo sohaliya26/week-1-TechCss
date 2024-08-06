@@ -6,6 +6,6 @@
 
 # CMD  ["catalina.sh","run"]
 FROM openjdk:17-jdk-slim
-COPY target/Cab.jar Cab.jar
+COPY target/car-booking.webapp.war car-booking.webapp.war
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/Cab.jar"]
+ENTRYPOINT ["java","-war","/car-booking.webapp.war"]
