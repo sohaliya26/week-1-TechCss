@@ -58,10 +58,11 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: [aws-ec2]
+    runs-on: [self-hosted]
     steps:
       - name: Install & Pull Image from Docker Hub
         run: |
+          sudo apt-get update
           sudo apt install docker.io -y
           sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/car-booking:latest
           
